@@ -7,14 +7,15 @@ const phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
 
 const correct = () => {
   const newResult = document.createElement("div");
-  newResult.textContent = `Valid US number: ${input.value}`;
+  newResult.innerHTML = `Valid US number:<br>${input.value}`;
   newResult.style.color = "green";
   result.appendChild(newResult);
   console.log("true");
 };
+
 const incorrect = () => {
   const newResult = document.createElement("div");
-  newResult.textContent = `Invalid US number: ${input.value}`;
+  newResult.innerHTML = `Invalid US number:<br>${input.value}`;
   newResult.style.color = "red";
   result.appendChild(newResult);
   console.log("false");
